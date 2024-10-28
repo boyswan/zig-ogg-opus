@@ -1,8 +1,5 @@
 const std = @import("std");
 const assert = std.debug.assert;
-// const c = @cImport({
-//     @cInclude("png.h");
-// });
 
 const c = @cImport({
     @cInclude("opus/opus.h");

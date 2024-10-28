@@ -11,6 +11,7 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+<<<<<<< HEAD
     exe.linkLibC();
 
     exe.addIncludePath(.{ .cwd_relative = "/opt/homebrew/include" }); // Homebrew include path
@@ -24,6 +25,11 @@ pub fn build(b: *std.Build) void {
     // exe.linkSystemLibrary("libpng");
 
     // Link libc
+=======
+    exe.addIncludePath(.{ .cwd_relative = "/opt/homebrew/include" }); // Homebrew include path
+    exe.addLibraryPath(.{ .cwd_relative = "/opt/homebrew/lib" }); //
+    exe.linkSystemLibrary("opus");
+>>>>>>> 7f6b94b (init)
     exe.linkLibC();
 
     b.installArtifact(exe);
